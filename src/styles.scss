@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Proza+Libre:wght@700&display=swap');
+@import url('../src/assets/fontawesome-icons/css/all.css');
+
+html, .root {
+  font-size: 18px;
+  line-height: 24px;
+}
+body, .article {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3333333rem;
+  background-color: #f6f6f8;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Proza Libre', sans-serif;
+}
+
+h1, .h1 {
+  font-size: 4.2222222rem;
+  line-height: 5.3333333rem;
+  margin-top: 1.3333333rem;
+  margin-bottom: 2.6666666rem;
+}
+h2, .h2 {
+  font-size: 2.6111111rem;
+  line-height: 2.6666667rem;
+  margin-top: 1.3333333rem;
+  margin-bottom: 1.3333333rem;
+}
+h3, .h3 {
+  font-size: 1.6111111rem;
+  line-height: 2.6666667rem;
+  margin-top: 1.3333333rem;
+  margin-bottom: 0;
+}
+h4, .h4 {
+  font-size: 1rem;
+  line-height: 1.3333333rem;
+  margin-top: 1.3333333rem;
+  margin-bottom: 0;
+}
+h5, .h5 {
+  font-size: 1rem;
+  line-height: 1.3333333rem;
+  margin-top: 1.3333333rem;
+  margin-bottom: 0;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-bottom: 1.3333333rem;
+}
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
