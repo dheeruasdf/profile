@@ -1,34 +1,40 @@
 <header>
-  <nav class="main-nav">
-    <ul class="main-nav__nav-items sidenav">
-      <li class="main-nav__nav-item"><a class="active" routerLink="">Home</a></li>
-      <li class="main-nav__nav-item"><a routerLink="">Achievements</a></li>
-      <li class="main-nav__nav-item"><a routerLink="">Technical Skills</a></li>
-      <li class="main-nav__nav-item"><a routerLink="">Performance Feedback</a></li>
-      <li class="main-nav__nav-item"><a routerLink="">Qualification</a></li>
-      <li class="main-nav__nav-item"><a routerLink="">Contact Info</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-sm navbar-light fixed-top main-nav" id="NavBar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav main-nav__nav-items">
+        <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Achievements">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="#TechnicalSkills">Technical Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ProjectsWorkedOn">Projects Worked On</a></li>
+        <li class="nav-item"><a class="nav-link" href="#PerformanceFeedback">Performance Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Qualification">Qualification</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ContactInfo">Contact Info</a></li>
+      </ul>
+    </div>
   </nav>
 </header>
 
 <section id="Home">
-  <div class="home">
+  <div class="container">
     <div class="home_content">
       <h1>Dheeraj Tummala</h1>
       <h3>Software Developer</h3>
       <p>Hello, I am a Full Stack Developer. I have a rich experience in website development using Angular, Java, Spring technologies. Also I am good at</p>
       <p>Java, Spring, Spring Boot, Angular, HTML, CSS, JavaScript</p>
       <a type="button" class="btn download-resume-button">Download Resume</a>
-      <a type="button" class="btn btn-outline-dark contact-me-button">Contact Me</a>
+      <a type="button" href="#ContactInfo" class="btn btn-outline-dark contact-me-button">Contact Me</a>
     </div>
     <img src="../../assets/images/profile_pic.png"
          srcset="../../assets/images/profile_pic@2x.png 2x, ../../assets/images/profile_pic@3x.png 3x"
          class="image" alt="Profile Image">
   </div>
-</section>
+  </section>
 
 <section id="Highlight">
-  <div class="highlight_content">
+  <div class="container">
     <div class="job-experience">
       <img src="../../assets/icons/job-icon.svg" alt="job-icon">
       <div class="content">
@@ -53,8 +59,8 @@
 </section>
 
 <section id="Achievements">
-  <div class="achievements">
-    <h1>Achievements</h1>
+  <div class="container">
+    <h2 class="main-heading">Achievements</h2>
     <div class="achievement-cards">
       <div class="achievement-card">
         <img src="../../assets/icons/award-icon.svg" alt="Award Icon">
@@ -86,8 +92,8 @@
 </section>
 
 <section id="TechnicalSkills">
-  <div class="technical-skills">
-    <h1>Technical Skills</h1>
+  <div class="container">
+    <h2 class="main-heading">Technical Skills</h2>
     <div class="skills">
       <div class="skill language-1">
         <p class="skill-name"><b>Spring</b></p>
@@ -164,8 +170,8 @@
 </section>
 
 <section id="ProjectsWorkedOn">
-  <div class="projects-worked-on">
-    <h1>Projects Worked On</h1>
+  <div class="container">
+    <h2 class="main-heading">Projects Worked On</h2>
     <div class="projects-worked-on-grid">
       <img src="../../assets/images/project_image.png"
            srcset="../../assets/images/project_image@2x.png 2x,
@@ -196,8 +202,8 @@
 </section>
 
 <section id="PerformanceFeedback">
-  <div class="performance-feedback">
-    <h1>Performance Feedback</h1>
+  <div class="container">
+    <h2 class="main-heading">Performance Feedback</h2>
     <div class="feedback-cards">
       <div class="feedback-card">
         <h3>Martin Westacott <small>(Senior Developer)</small></h3>
@@ -214,14 +220,14 @@
 </section>
 
 <section id="Qualification">
-  <div class="qualification">
-    <h1>Qualification</h1>
+  <div class="container">
+    <h2 class="main-heading">Qualification</h2>
     <div class="qualification-grid">
       <div class="education-grid">
         <h2>Education</h2>
         <div class="education-qualification">
           <h3>Master of Computer Application (MCA)</h3>
-          <h6>Osmania University</h6>
+          <h6>Vasavi College of Engineering</h6>
           <p>2015-2018</p>
         </div>
         <div class="education-qualification">
@@ -263,19 +269,19 @@
 </section>
 
 <section id="ContactInfo">
-  <div class="contact-info">
-    <h1>Contact Info</h1>
+  <div class="container">
+    <h2 class="main-heading">Contact Info</h2>
     <div class="contact-info-grid">
       <div class="contact-info-item">
-        <i class="fas fa-phone"></i>
+        <h1><i class="fas fa-phone"></i></h1>
         <p>+91 8143231354</p>
       </div>
       <div class="contact-info-item">
-        <i class="fas fa-envelope"></i>
+        <h1><i class="fas fa-envelope"></i></h1>
         <p>t.dheeraj333@gmail.com</p>
       </div>
       <div class="contact-info-item">
-        <i class="fas fa-location-arrow"></i>
+        <h1><i class="fas fa-location-arrow"></i></h1>
         <p>Plot No - 1628, Flat No - G1, Pragathi nagar, Hyderabad -500090</p>
       </div>
     </div>
@@ -283,5 +289,7 @@
 </section>
 
 <section id="Footer">
-  <p>All right reserved to Dheeraj Tummala @ 2020</p>
+  <div class="container">
+    <p>All right reserved to Dheeraj Tummala @ 2020</p>
+  </div>
 </section>

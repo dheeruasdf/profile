@@ -1,24 +1,45 @@
 @import "../../../src/variables.scss";
 
-section {
+@mixin grid-center-last( $columns ) {
+  $total_columns: $columns * 2;
+  $span: $total_columns / $columns;
+  $offset: $columns - 1;
+  $nth-child: if( $columns % 2 == 0, 'odd', 'even' );
+
+  display: grid;
+  grid-template-columns: repeat( $total_columns, 1fr );
+
+  & > * {
+    grid-column: span $span;
+
+    &:nth-last-child(#{$offset}):nth-child(#{$nth-child}) {
+      grid-column: $span / span $span;
+    }
+  }
+}
+
+section .container , .main-nav .navbar-collapse{
   max-width: 1280px;
   margin: 0 auto;
+  padding: 3.5rem 0;
+}
+
+.main-heading {
+  text-align: center;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  background-color: map_get($theme-colors, "text-light-color");
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.16);
-
   .main-nav {
-    width: 1280px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.16);
     margin: 0 auto;
-    padding-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    background-color: #f6f6f8;
+
+    .navbar-collapse {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0;
+    }
 
     .main-nav__nav-items {
       display: flex;
@@ -27,20 +48,28 @@ header {
 
     a {
       text-decoration: none;
-      padding: 0.5rem;
-      margin: 0.2rem;
-      border-radius: 0.5rem;
-      display: inline-block;
+      padding: 1.5rem;
+      border-radius: 5px;
+      display: block;
       color: map_get($theme-colors, "primary");
+
+      &.active {
+        background-color: #232940;
+        color: #FFFFFF;
+      }
+    }
+
+    ul {
+      margin: 0;
     }
   }
 }
 
-.home {
+#Home .container {
   display: grid;
   grid-template: 'home-content image';
   align-items: center;
-  margin-top: 7rem;
+  padding-top: 7rem;
 
   .home_content {
     grid-area: home-content;
@@ -79,11 +108,11 @@ header {
   }
 }
 
-.highlight_content {
+#Highlight .container {
   display: grid;
   align-items: center;
   justify-items: center;
-  margin-top: 7rem;
+  padding: 0;
   border-radius: 80px;
   background-color: #FFFFFF;
   box-shadow: 8px 16px 32px 0 rgba(0, 0, 0, 0.16);
@@ -103,8 +132,27 @@ header {
   }
 }
 
-.achievements {
-  margin-top: 7rem;
+
+#Achievements {
+  position: relative;
+  //background-color: rgba(54, 180, 194, 0.08);
+}
+
+#Achievements::after {
+  content: "";
+  background-image: url("src/assets/images/backgrounds/background-3.jpg");
+  background-size: 100% 100%;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#Achievements .container {
+  //margin-top: 7rem;
 
   h1 {
     text-align: center;
@@ -116,6 +164,7 @@ header {
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
+    @include grid-center-last(3);
 
     .achievement-card {
       width: 100%;
@@ -128,8 +177,8 @@ header {
   }
 }
 
-.technical-skills {
-  margin-top: 7rem;
+#TechnicalSkills .container {
+  //margin-top: 7rem;
 
   h1 {
     text-align: center;
@@ -204,8 +253,27 @@ header {
   }
 }
 
-.projects-worked-on {
-  margin-top: 7rem;
+
+#ProjectsWorkedOn {
+  position: relative;
+  //background-color: rgba(54, 180, 194, 0.08);
+}
+
+#ProjectsWorkedOn::after {
+  content: "";
+  background-image: url("src/assets/images/backgrounds/background1.png");
+  background-size: 100% 100%;
+  opacity: 0.05;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#ProjectsWorkedOn .container {
+  //margin-top: 7rem;
 
   h1 {
     text-align: center;
@@ -233,8 +301,26 @@ header {
   }
 }
 
-.performance-feedback {
-  margin-top: 7rem;
+#PerformanceFeedback {
+  position: relative;
+  //background-color: rgba(54, 180, 194, 0.08);
+}
+
+#PerformanceFeedback::after {
+  content: "";
+  background-image: url("src/assets/images/backgrounds/background-3.jpg");
+  background-size: 100% 100%;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#PerformanceFeedback .container {
+  //margin-top: 7rem;
 
   h1 {
     text-align: center;
@@ -255,9 +341,25 @@ header {
   }
 }
 
-.qualification {
-  margin-top: 7rem;
+#Qualification {
+  position: relative;
+  //background-color: rgba(54, 180, 194, 0.08);
+}
 
+#Qualification::after {
+  content: "";
+  background-image: url("src/assets/images/backgrounds/background1.png");
+  background-size: 100% 100%;
+  opacity: 0.05;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#Qualification .container {
   h1 {
     text-align: center;
   }
@@ -278,8 +380,8 @@ header {
   }
 }
 
-.contact-info {
-  margin-top: 7rem;
+#ContactInfo .container {
+  //margin-top: 7rem;
   margin-bottom: 3rem;
 
   h1 {
@@ -300,7 +402,7 @@ header {
       background-color: #ffffff;
 
       i {
-        font-size: 76px;
+        //font-size: 76px;
         margin: 1rem;
       }
 
@@ -309,4 +411,8 @@ header {
       }
     }
   }
+}
+
+#Footer .container {
+  padding: 1rem 0;
 }
