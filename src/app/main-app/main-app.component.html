@@ -1,17 +1,17 @@
 <header>
-  <nav class="navbar navbar-expand-sm navbar-light fixed-top main-nav" id="NavBar">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top main-nav" id="NavBar">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" #collapse>
       <ul class="navbar-nav main-nav__nav-items">
-        <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#Achievements">Achievements</a></li>
-        <li class="nav-item"><a class="nav-link" href="#TechnicalSkills">Technical Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ProjectsWorkedOn">Projects Worked On</a></li>
-        <li class="nav-item"><a class="nav-link" href="#PerformanceFeedback">Performance Feedback</a></li>
-        <li class="nav-item"><a class="nav-link" href="#Qualification">Qualification</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ContactInfo">Contact Info</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="collapse.classList.remove('show')" href="#Home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="collapse.classList.remove('show')" href="#Achievements">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="collapse.classList.remove('show')" href="#TechnicalSkills">Technical Skills</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="collapse.classList.remove('show')" href="#ProjectsWorkedOn">Projects Worked On</a></li>
+<!--        <li class="nav-item"><a class="nav-link" href="#PerformanceFeedback">Performance Feedback</a></li>-->
+        <li class="nav-item"><a class="nav-link" (click)="collapse.classList.remove('show')" href="#Qualification">Qualification</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="collapse.classList.remove('show')" href="#ContactInfo">Contact Info</a></li>
       </ul>
     </div>
   </nav>
@@ -24,7 +24,7 @@
       <h3>Software Developer</h3>
       <p>Hello, I am a Full Stack Developer. I have a rich experience in website development using Angular, Java, Spring technologies. Also I am good at</p>
       <p>Java, Spring, Spring Boot, Angular, HTML, CSS, JavaScript</p>
-      <a type="button" class="btn download-resume-button">Download Resume</a>
+      <a type="button" href="../../assets/Resume.pdf" target="_blank" class="btn download-resume-button">View Resume</a>
       <a type="button" href="#ContactInfo" class="btn btn-outline-dark contact-me-button">Contact Me</a>
     </div>
     <img src="../../assets/images/profile_pic.png"
@@ -35,23 +35,24 @@
 
 <section id="Highlight">
   <div class="container">
-    <div class="job-experience">
+    <div class="job-experience" style="grid-area: job-experience">
       <img src="../../assets/icons/job-icon.svg" alt="job-icon">
       <div class="content">
         <h3>2 Years Job</h3>
         <p>Experience</p>
       </div>
     </div>
-    <h1>|</h1>
-    <div class="intern-experience">
+    <h1 class="separator" style="grid-area: seperator">|</h1>
+    <h3 class="and" style="grid-area: and">&</h3>
+    <div style="grid-area: intern-experience" class="intern-experience">
       <img src="../../assets/icons/intern-icon.svg" alt="job-icon">
       <div class="content">
         <h3>8 Months Internship</h3>
         <p>Experience</p>
       </div>
     </div>
-    <h3>At</h3>
-    <div class="company-info">
+    <h3 style="grid-area: at">At</h3>
+    <div style="grid-area: company-name" class="company-info">
       <h3>Thomson Reuters</h3>
       <p>From October 2017 - Till Date</p>
     </div>
@@ -95,74 +96,78 @@
   <div class="container">
     <h2 class="main-heading">Technical Skills</h2>
     <div class="skills">
-      <div class="skill language-1">
-        <p class="skill-name"><b>Spring</b></p>
-        <p class="percentage"><b>80%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="languages">
+        <div class="skill">
+          <p class="skill-name"><b>Spring</b></p>
+          <p class="percentage"><b>80%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p class="skill-name"><b>Spring Boot</b></p>
+          <p class="percentage"><b>60%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p class="skill-name"><b>Core Java</b></p>
+          <p class="percentage"><b>90%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p class="skill-name"><b>Angular</b></p>
+          <p class="percentage"><b>75%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p class="skill-name"><b>Python</b></p>
+          <p class="percentage"><b>50%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
       </div>
-      <div class="skill language-2">
-        <p class="skill-name"><b>Spring Boot</b></p>
-        <p class="percentage"><b>60%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="professional-skills">
+        <div class="skill">
+          <p class="skill-name"><b>Postgres, SQL</b></p>
+          <p class="percentage"><b>50%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
-      </div>
-      <div class="skill language-3">
-        <p class="skill-name"><b>Core Java</b></p>
-        <p class="percentage"><b>90%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="skill">
+          <p class="skill-name"><b>HTML, CSS, Javascript</b></p>
+          <p class="percentage"><b>75%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
-      </div>
-      <div class="skill language-4">
-        <p class="skill-name"><b>Angular</b></p>
-        <p class="percentage"><b>75%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="skill">
+          <p class="skill-name"><b>Micorservice Architecture</b></p>
+          <p class="percentage"><b>70%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
-      </div>
-      <div class="skill language-5">
-        <p class="skill-name"><b>Python</b></p>
-        <p class="percentage"><b>50%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="skill">
+          <p class="skill-name"><b>Test Driven Development</b></p>
+          <p class="percentage"><b>80%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
-      </div>
-      <div class="skill professional-1">
-        <p class="skill-name"><b>Postgres, SQL</b></p>
-        <p class="percentage"><b>50%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      </div>
-      <div class="skill professional-2">
-        <p class="skill-name"><b>HTML, CSS, Javascript</b></p>
-        <p class="percentage"><b>75%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      </div>
-      <div class="skill professional-3">
-        <p class="skill-name"><b>Micorservice Architecture</b></p>
-        <p class="percentage"><b>70%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      </div>
-      <div class="skill professional-4">
-        <p class="skill-name"><b>Test Driven Development</b></p>
-        <p class="percentage"><b>80%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      </div>
-      <div class="skill professional-5">
-        <p class="skill-name"><b>Testing (Mocha, Protractor)</b></p>
-        <p class="percentage"><b>80%</b></p>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="skill">
+          <p class="skill-name"><b>Testing (Mocha, Protractor)</b></p>
+          <p class="percentage"><b>80%</b></p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -201,7 +206,7 @@
   </div>
 </section>
 
-<section id="PerformanceFeedback">
+<!--<section id="PerformanceFeedback">
   <div class="container">
     <h2 class="main-heading">Performance Feedback</h2>
     <div class="feedback-cards">
@@ -217,7 +222,7 @@
       </div>
     </div>
   </div>
-</section>
+</section>-->
 
 <section id="Qualification">
   <div class="container">
@@ -272,17 +277,21 @@
   <div class="container">
     <h2 class="main-heading">Contact Info</h2>
     <div class="contact-info-grid">
-      <div class="contact-info-item">
-        <h1><i class="fas fa-phone"></i></h1>
-        <p>+91 8143231354</p>
+      <img src="../../assets/images/backgrounds/contacts@2x.png" alt="contacts background" class="image">
+      <div class="contact-info-items">
+        <div class="contact-info-item">
+          <p><i class="fas fa-phone"></i> +91 8143231354</p>
+        </div>
+        <div class="contact-info-item">
+          <p><i class="fas fa-envelope"></i> t.dheeraj333@gmail.com</p>
+        </div>
+        <div class="contact-info-item">
+          <p><i class="fas fa-location-arrow"></i> Plot No - 1628, Flat No - G1, Pragathi nagar, Hyderabad -500090</p>
+        </div>
       </div>
-      <div class="contact-info-item">
-        <h1><i class="fas fa-envelope"></i></h1>
-        <p>t.dheeraj333@gmail.com</p>
-      </div>
-      <div class="contact-info-item">
-        <h1><i class="fas fa-location-arrow"></i></h1>
-        <p>Plot No - 1628, Flat No - G1, Pragathi nagar, Hyderabad -500090</p>
+      <div class="contact-social-media-items">
+        <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/dheeruasdf"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </div>
   </div>
@@ -290,6 +299,6 @@
 
 <section id="Footer">
   <div class="container">
-    <p>All right reserved to Dheeraj Tummala @ 2020</p>
+    <p>Created by Me. (Dheeraj Tummala @2020)</p>
   </div>
 </section>
