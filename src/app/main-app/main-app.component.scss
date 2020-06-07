@@ -82,13 +82,15 @@ header {
 
 #Home .container {
   display: grid;
-  grid-template: 'home-content image';
+  grid-template: 'image' 'home-content' auto / 1fr;
   align-items: center;
   margin-top: 3rem;
   padding: 2rem;
+  grid-gap: 1rem;
 
   @include md {
     padding: 7rem 2rem;
+    grid-template: 'home-content image';
   }
 
   .home_content {
@@ -124,7 +126,11 @@ header {
 
   .image {
     grid-area: image;
-    width: 20vw;
+    width: 55vw;
+
+    @include md {
+      width: 20vw;
+    }
   }
 
 
